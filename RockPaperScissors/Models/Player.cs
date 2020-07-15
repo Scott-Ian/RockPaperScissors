@@ -1,3 +1,5 @@
+using System;
+
 namespace RockPaperScissors.Models
 {
   public class Player
@@ -5,10 +7,10 @@ namespace RockPaperScissors.Models
     public string RPS {get; set;}
     public bool IsWin {get; set;}
 
-    public Player(string rps)
+    /*public Player(string rps)
     {
       RPS = rps;
-    }
+    }*/
 
     public static void RPSComparison(Player player1, Player player2)
     {
@@ -24,6 +26,25 @@ namespace RockPaperScissors.Models
       else
       {
         player2.IsWin = true;
+      }
+    }
+
+    public void ComputerChoice()
+    {
+      Random rnd = new Random();
+      int rpsChoice = rnd.Next(1,4);
+
+      if (rpsChoice == 1)
+      {
+        RPS = "R";
+      }
+      else if (rpsChoice == 2)
+      {
+        RPS = "P";
+      }
+      else
+      {
+        RPS = "S";
       }
     }
   }
