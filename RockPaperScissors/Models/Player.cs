@@ -7,11 +7,6 @@ namespace RockPaperScissors.Models
     public string RPS {get; set;}
     public bool IsWin {get; set;}
 
-    /*public Player(string rps)
-    {
-      RPS = rps;
-    }*/
-
     public static void RPSComparison(Player player1, Player player2)
     {
       if (player1.RPS == player2.RPS)
