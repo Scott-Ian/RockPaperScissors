@@ -2,11 +2,16 @@ namespace RockPaperScissors.Models
 {
   public class Player
   {
-    public string PlayerName {get; set;}
+    public string RPS {get; set;}
 
-    public Player(string name)
+    public Player(string rps)
     {
-      PlayerName = name;
+      RPS = rps;
+    }
+
+    public static Player RPSComparison(Player player1, Player player2)
+    {
+      return player2;
     }
 
   }
