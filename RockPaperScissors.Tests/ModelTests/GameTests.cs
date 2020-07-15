@@ -18,8 +18,8 @@ namespace RockPaperScissors.TestTools
     {
       Player rockPlayer = new Player("R");
       Player scissorsPlayer = new Player("S");
-
-      Assert.AreEqual(rockPlayer, Player.RPSComparison(rockPlayer, scissorsPlayer));
+      Player.RPSComparison(rockPlayer, scissorsPlayer);
+      Assert.AreEqual(true, rockPlayer.IsWin);
     }
   }
 }
